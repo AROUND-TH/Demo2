@@ -6,9 +6,9 @@ from odoo import models, fields, api, _
 class MrpWorkCenter(models.Model):
     _inherit = 'mrp.workcenter'
 
-    nr_days = fields.Float(_('working days per week'), required="True")
-    nr_hours = fields.Float(_('working hours per shift'), required="True")
-    nr_shift = fields.Integer(_('shifts per day'), required="True")
+    nr_days = fields.Float(_('working days per week'), required="Fail")
+    nr_hours = fields.Float(_('working hours per shift'), required="Fail")
+    nr_shift = fields.Integer(_('shifts per day'), required="Fail")
     wc_capacity = fields.Float(_('WC Weekly Available Capacity'), compute='_calculate_wc_capacity', store='True', group_operator='avg')
     hours_uom = fields.Many2one('uom.uom', _('Hours'), compute="_get_uom_hours")
 
