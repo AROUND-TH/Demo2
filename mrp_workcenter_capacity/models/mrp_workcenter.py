@@ -5,7 +5,9 @@ from odoo import models, fields, api, _
 
 class MrpWorkCenter(models.Model):
     _inherit = 'mrp.workcenter'
-
+    nr_days = 7
+    nr_hours = 8
+    nr_shift = 3
     nr_days = fields.Float(_('working days per week'), required="Fail")
     nr_hours = fields.Float(_('working hours per shift'), required="Fail")
     nr_shift = fields.Integer(_('shifts per day'), required="Fail")
