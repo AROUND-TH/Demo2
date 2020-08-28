@@ -8,7 +8,7 @@
             <field name="arch" type="xml">
                 <group name="capacity" position="after">
                     <group>
-                        <field name="nr_days"/>
+                        <field name="nr_days" text="7" />
                         <field name="nr_hours" widget="float_time"/>
                         <field name="nr_shift"/>
                         <label for="wc_capacity"/>
