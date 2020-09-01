@@ -8,9 +8,9 @@ class MrpWorkCenter(models.Model):
     nr_days = 7
     nr_hours = 8
     nr_shift = 3
-    nr_days = fields.Float(_('working days per week'), compute='7')
-    nr_hours = fields.Float(_('working hours per shift'), compute='8')
-    nr_shift = fields.Integer(_('shifts per day'), compute='3')
+    nr_days = fields.Float(_('working days per week'))
+    nr_hours = fields.Float(_('working hours per shift'))
+    nr_shift = fields.Integer(_('shifts per day'))
     wc_capacity = fields.Float(_('WC Weekly Available Capacity'), compute='_calculate_wc_capacity', store='True', group_operator='avg')
     hours_uom = fields.Many2one('uom.uom', _('Hours'), compute="_get_uom_hours")
 
